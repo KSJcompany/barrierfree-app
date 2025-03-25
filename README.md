@@ -27,6 +27,7 @@ graph TD
     API --> Search[Naver API → Selenium 크롤링]
     Search --> Analyze[키워드 분석 → EXAONE 요약]
     Analyze --> Response[JSON 응답 → 챗봇/웹에 표시]
+'''
 
 ---
 
