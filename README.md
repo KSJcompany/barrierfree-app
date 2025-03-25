@@ -22,11 +22,19 @@
 
 ```mermaid
 graph TD
-    User[사용자] --> UI[Flutter 앱 or Streamlit 웹앱]
-    UI --> API[FastAPI API]
-    API --> Search[Naver API → Selenium 크롤링]
-    Search --> Analyze[키워드 분석 → EXAONE 요약]
-    Analyze --> Response[JSON 응답 → 챗봇/웹에 표시]
+    사용자 --> FlutterApp["Flutter 채팅 앱"]
+    FlutterApp -->|GET /get_accessibility_score| FastAPI["FastAPI 서버"]
+
+    FastAPI --> NaverAPI["Naver Research API"]
+    FastAPI --> Selenium["Selenium 블로그 본문 수집"]
+    FastAPI --> ScoreEngine["키워드 기반 점수 분석"]
+    FastAPI --> EXAONE["EXAONE 요약 생성기"]
+
+    ScoreEngine --> Cache[캐시 저장소]
+    EXAONE --> Cache
+
+    FastAPI -->|결과 JSON| FlutterApp
+    FastAPI --> Streamlit["Streamlit 웹 UI"]
 ```
 
 ---
