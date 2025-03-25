@@ -27,7 +27,7 @@ graph TD
     API --> Search[Naver API → Selenium 크롤링]
     Search --> Analyze[키워드 분석 → EXAONE 요약]
     Analyze --> Response[JSON 응답 → 챗봇/웹에 표시]
-'''
+```
 
 ---
 
@@ -75,13 +75,15 @@ barrierfree-project/
 ```bash
 cd backend
 uvicorn app.main_with_cache:app --reload
+```
 
 ### 🎨 2. Streamlit 앱 실행
 
 ```bash
 streamlit run streamlit_app.py
+```
 
-###📱 3. Flutter 앱 실행
+### 📱 3. Flutter 앱 실행
 
 ▸ WebView 앱 실행
 
@@ -89,6 +91,7 @@ streamlit run streamlit_app.py
 cd mobile_app_webview
 flutter pub get
 flutter run
+```
 
 ▸ 채팅 UI 앱 실행
 
@@ -96,18 +99,20 @@ flutter run
 cd mobile_app_chat_ui
 flutter pub get
 flutter run
+```
 
-###🌐 4. 외부 접근용 ngrok 실행 (선택)
+### 🌐 4. 외부 접근용 ngrok 실행 (선택)
 
-'''bash
+```bash
 ngrok http 8501
+```
 
-##🔌 API 명세
+## 🔌 API 명세
 GET /get_accessibility_score?place=장소명
 
-###✅ 성공 응답 예시
+### ✅ 성공 응답 예시
 
-'''json
+```json
 {
   "place": "서울숲",
   "score": 87,
@@ -117,10 +122,12 @@ GET /get_accessibility_score?place=장소명
   "chat_style_summary": "서울숲은 휠체어나 유모차도 편리하게 이동할 수 있는 장소예요.",
   "from_cache": false
 }
+```
 
-###❌ 실패 응답 예시
+### ❌ 실패 응답 예시
 
-'''json
+```json
 {
   "error": "리뷰를 찾을 수 없습니다."
 }
+```
