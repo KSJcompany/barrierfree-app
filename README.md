@@ -41,6 +41,7 @@ graph TD
 
 ## 📁 폴더 구조
 
+```plaintext
 barrierfree-project/
 ├── backend/                        # 🧠 FastAPI + Streamlit 서버
 │   ├── app/
@@ -73,6 +74,7 @@ barrierfree-project/
 │   └── pubspec.yaml
 │
 └── README.md                        # 프로젝트 설명 파일
+```
 
 ---
 
