@@ -32,7 +32,6 @@ graph TD
 
 ## 📁 폴더 구조
 
-```text
 barrierfree-project/
 ├── backend/                        # 🧠 FastAPI + Streamlit 서버
 │   ├── app/
